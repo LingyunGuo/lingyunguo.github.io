@@ -1,0 +1,53 @@
+#resume_text {
+    width: 70%;
+    margin-left: 15%;
+    padding: 10% 0;
+}
+.text_center {
+    text-align: center;
+}
+.text_right {
+    text-align: right;
+}
+body {
+    width: 100%;
+}
+p {
+    font-size: 20px;
+}
+hr {
+    width: 30%;
+    border-top: 3px solid #ddd;
+}
+h1 {
+    font-size: 108px;
+    padding-bottom: 30px;
+}
+h3 {
+    padding-bottom: 20px;
+}
+.jobTitle {
+    font-size: 24px;
+    font-weight: 400;
+}
+.section.raleWay {
+    font-weight: 400;
+    border-bottom: 3px solid #ddd;
+}
+#name span {
+    font-size: 56px;
+}
+.badScript {
+    font-family: 'Bad Script', cursive;
+}
+.raleWay {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+}
+.subSection {
+    padding: 2% 0;
+}
+.small p {
+    font-size: 16px;
+    color: #999;
+}

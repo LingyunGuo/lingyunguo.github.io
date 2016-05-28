@@ -26,9 +26,12 @@ h1 {
 h3 {
     padding-bottom: 20px;
 }
-.jobTitle {
+.subsectionTitle {
     font-size: 24px;
     font-weight: 400;
+}
+.subsectionTitle + a {
+    float: right;
 }
 .section.raleWay {
     font-weight: 400;
@@ -50,4 +53,21 @@ h3 {
 .small{
     font-size: 16px;
     color: #999;
+}
+.carouselWrap.tetris {
+    width: 400px;
+    margin: 0 auto;
+}
+.carouselWrap.snake {
+    width: 800px;
+    margin: 0 auto;
+}
+.project_carousel {
+    display: inline-block;
+}
+.slick-slide {
+    margin: 10px;
+}
+.slick-prev:before, .slick-next:before {
+    color: #ddd!important;
 }

@@ -71,3 +71,42 @@ h3 {
 .slick-prev:before, .slick-next:before {
     color: #ddd!important;
 }
+.skillIcon {
+    font-size: 144px;
+}
+.toolIcon {
+    font-size: 72px;
+}
+.toolImg {
+    height: 72px;
+    width: 72px;
+    vertical-align: text-bottom;
+}
+.skillIcon.small {
+    font-size: 20px;
+}
+.skill {
+    height: 144px;
+    width: 144px;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+}
+ .tool {
+    height: 72px;
+    width: 72px;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+
+ }
+.skill_detail {
+    position: absolute;
+    padding: 10px;
+    text-align: center;
+    height: 144px;
+    top: 0px;
+    width: 144px;
+    background:#fff;
+    opacity: 0.7;
+}

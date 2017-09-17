@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="resumeApp">
 
 <head>
     <meta charset="UTF-8">
@@ -13,19 +13,37 @@
     <link rel="stylesheet" href="css/resume.css" />
     <link rel="stylesheet" type="text/css" href="js/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css" />
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="js/resume.app.js"></script>
 </head>
 
 <body>
     <div id="resume_text" class="raleWay">
         <h1 id="name" class="badScript"><span>Hi, I'm</span> Lingyun Guo</h1>
         <p>A studnet from <span class="badScript"> University of Waterloo, Canada</span>, <br />with major Software Engineering,
-            currently in 2B term.</p><br />
+            currently in 3B term.</p><br />
         <!--<hr>-->
-        <div class="subSection">
+        <div class="subSection" ng-controller="techSkillSetCtrl">
             <h3 class="text_center"><span class="raleWay section"> Technical Skills </span></h3>
-            <p>Proficient in C/C++, JavaScript, HTML and CSS, familiarity with Assembly, Python and C#</p>
-            <p>Working experience with Docker, Vagrant, MongoDB and Elasticsearch</p>
-            <p>Experience using Microsoft Word, Excel, PowerPoint, Adobe Photoshop, JIRA</p>
+            <div>
+                <div ng-repeat="skill in skills" class="skill">
+                    <i class="devicon-{{skill.name | lowercase}}-plain colored skillIcon" ng-mouseenter="skill.show = true"></i>
+                    <div ng-show="skill.show" ng-mouseleave="skill.show = false" class="skill_detail">
+                        <span ng-if="skill.experience"><b>{{skill.experience}}</b></span><br/><br/>
+                        <i ng-repeat="s in skill.related" class="devicon-{{s | lowercase}}-plain devicon-{{s | lowercase}}-plain-wordmark colored skillIcon small"></i>
+                    </div>
+                </div>
+            </div>
+            <h3 class="text_center"><span class="raleWay section"> Tools </span></h3>
+            <div>
+                <div ng-repeat="tool in tools" class="tool">
+                    <i ng-if="tool.indexOf('.') == -1" class="devicon-{{tool | lowercase}}-plain colored toolIcon"></i>
+                    <img ng-if="tool.indexOf('.') > -1" src="./img/{{tool}}" alt="{{tool}}" class="toolImg"/>
+                </div>
+            </div>
         </div>
         <div class="subSection">
             <h3 class="text_center"><span class="raleWay section">Projects</span></h3>
@@ -77,6 +95,13 @@
             <p>Built a “WYSIWYG” online editor for special markup</p>
             <p>Re-implemented web interface for image rendering farm, created new backend services</p>
             <p>Added in new features for both web interface and the software Houdini using Python and Qt</p>
+            <h4 class="raleWay"><span class="subsectionTitle">Front End Engineer Intern</span>, SugarCRM, Cupertino, California, USA, May 2017
+                - Aug. 2017</h4>
+            <p>Worked as a member in an agile team using Backbone.js and jQuery to build a robust platform that handles high
+                volumn
+            </p>
+            <p>Helped the team deliver new feature Shareable Dashboards</p>
+            <p>Participated in re-design and re-implementation of Skins project</p>
         </div>
         <div class="subSection">
             <h3 class="text_center"><span class="raleWay section">Qualifications</span></h3>
